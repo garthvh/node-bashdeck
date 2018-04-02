@@ -1,0 +1,110 @@
+{
+
+"buttons":[
+
+  {
+    "key": 0,
+    "symbol": "google-chrome",
+    "color": "royalblue",
+    "text": "Chrome",
+    "cmdDown": [0, "Launch Google Chrome", 1]
+  },
+  {
+    "key": 1,
+    "symbol": "firefox",
+    "color": "orangered",
+    "text": "Firefox",
+    "cmdDown": [0, "Launch Firefox", 1]
+  },
+  {
+    "key": 2,
+    "symbol": "netflix",
+    "color": "red",
+    "text": "Netflix",
+    "cmdDown": [0, "Open Netflix", 1]
+  },
+  {
+    "key": 3,
+    "symbol": "github-circle",
+    "text": "github",
+    "cmdDown": [0, "Open Github", 1]
+  },
+  {
+    "key": 4,
+    "symbol": "visualstudio",
+    "text": "VS Code",
+    "color": "indigo",
+    "cmdDown": [0, "Launch VS Code", 1]
+  },
+ {
+    "key": 5,
+    "symbol": "motorbike",
+    "color": "magenta",
+    "text": "Motorbike",
+    "cmdDown": [0, "A Motor Bike", 1]
+  },
+  {
+    "key": 6,
+    "symbol": "amazon",
+    "color": "orange",
+    "text": "Amazon",
+    "cmdDown": [0, "Open Amazon", 1]
+  },
+  {
+    "key": 7,
+    "symbol": "facebook",
+    "color": "blue",
+    "text": "Facebook",
+    "cmdDown": [0, "Open Facebook", 1]
+  },
+  {
+    "key": 8,
+    "symbol": "calculator",
+    "color": "slategray",
+    "text": "Calculator",
+    "cmdDown": [0, "Launch the calculator", 1]
+  },
+  {
+    "key": 9,
+    "symbol": "console",
+    "color": "whitesmoke",
+    "text": "Terminal",
+    "cmdDown": [0, "Launch a terminal", 1]
+  },
+  {
+    "key": 10,
+    "symbol": "settings",
+    "color": "dimgray",
+    "text": "Settings",
+    "cmdDown": [0, "Open Settings", 1]
+  },
+  {
+    "key": 11,
+    "symbol": "football",
+    "color": "brown",
+    "text":"Football",
+    "cmdDown": [0, "A football", 1]
+  },
+  {
+    "key": 12,
+    "symbol": "airballoon",
+    "color": "palegreen",
+    "text":"Balloon",
+    "cmdDown": [0, "A hot air balloon", 1]
+  },
+  {
+    "key": 13,
+    "symbol": "lightbulb",
+    "color": "white",
+    "text": "Lights Off",
+    "cmdDown": [0, "turn off the lights", 1]
+  },
+  {
+    "key": 14,
+    "symbol": "lightbulb-on",
+    "color": "yellow",
+    "text": "Lights On",
+    "cmdDown": [0, "Turn on the lights", 1]
+  }
+]
+}

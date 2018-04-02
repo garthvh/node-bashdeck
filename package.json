@@ -1,5 +1,5 @@
 {
-  "name": "node-oscdeck",
+  "name": "node-bashdeck",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "elgato-stream-deck": "^1.2.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "material-design-icons-svg": "^1.1.2",
-    "node-osc": "^2.1.0",
     "parse-color": "^1.0.0",
     "sharp": "^0.18.4"
   }

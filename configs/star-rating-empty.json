@@ -1,0 +1,37 @@
+{
+
+  "buttons":[
+
+    {
+      "key": 5,
+      "symbol": "star-outline",
+      "color": "gold",
+      "cmdDown": [0, "your-api/five-star", 1]
+    },
+    {
+      "key": 6,
+      "symbol": "star-outline",
+      "color": "gold",
+      "cmdDown": [0, "your-api/four-star", 1]
+    },
+    {
+      "key": 7,
+      "symbol": "star-outline",
+      "color": "gold",
+      "cmdDown": [0, "your-api/three-star", 1]
+    },    
+    {
+      "key": 8,
+      "symbol": "star-outline",
+      "color": "gold",
+      "cmdDown": [0, "your-api/two-star", 1]
+    },    
+    {
+      "key": 9,
+      "symbol": "star-outline",
+      "color": "gold",
+      "cmdDown": [0, "your-api/one-star", 1]
+    }
+
+  ]
+}

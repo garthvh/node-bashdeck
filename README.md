@@ -1,32 +1,14 @@
-# node-oscdeck
-node.js app to send OSC messages from an Elgato Stream Deck.
+# node-bashdeck
+This is a simple node.js app to send bash commands and customized icon buttons to an Elgato Stream Deck on Linux.
 
-**Project is experimental, untested and might change completely at any moment.**
+![All Buttons](/examples/default-config.jpg "Default Command Layout")
 
-node-oscdeck is based on [node-elgato-stream-deck](https://github.com/Lange/node-elgato-stream-deck) by Lange.
-Check that repository for button map and install instructions.
+I was looking for a way to use the Stream Deck with linux I don't really do any streaming or PC gaming but I thought it was an interesting input device. I found [node-oscdeck](https://github.com/loveolsson/node-oscdeck) which used the [Google Material Design](https://materialdesignicons.com/) icon set svg files and allowed for text to be added to the buttons.
 
-## Icons
-The icons for the Stream Deck buttons are created from SVG versions of the https://materialdesignicons.com/ icon set.
+I wanted to be able to run arbitrary commands from buttons I replaced the lines sending OSC commands with a bash command and renamed the functions and elements in the JSON files to reflect the change to sending commands.
 
-The symbols are currently rendered synchronously at startup and is really slow.
-
-## Settings file
-The settings are loaded from the settings.json file.
-
-### Targets
-"targets" is an array of OSC targets that can be used in the button assignments. Targets are referred to by index in this array.
-```
-"targets": [
-    { "host": "localhost", "port": 53000 }
-  ]
-```
-
-### Buttons
-"buttons" is an array of objects describing each button on the Stream Deck.
-
-![](examples/skip.png)
-
+## Buttons
+Each file in the configs folder contains a "buttons" array of objects describing each button on the Stream Deck. Below is an example for button 0 (top right).  By default the default.json file is loaded which contains all 5 buttons and writes text to the console log.
 
 ```
   {
@@ -35,7 +17,31 @@ The settings are loaded from the settings.json file.
                                 // referring to the names from https://materialdesignicons.com/
     "color": "green",           // Color of symbol; "red", "#FF0000", "rgb(255, 0, 0)"
     "text": "SKIP",             // Text rendered on button. If left blank, the icon is rendered bigger.
-    "oscDown": [0, "/skip", 1], // The OSC message to send when button is pressed. [target, path, value]
-    "oscUp": [0, "/skip", 0]    // The OSC message to send when button is released. [target, path, value]
+    "cmdDown": [0, "/skip", 1], // The cmd message to send when button is pressed. [cmd, value]
+    "cmdUp": [0, "/skip", 0]    // The cmd message to send when button is released. [cmd, value]
   }
 ```
+
+![Desktop Layout](/examples/solus-config.jpg "Solus Desktop Command Layout")
+
+I was able to set up all of the progams and webpages I wanted the stream deck to open for me on my solus gnome desktop using bash commands.  There are thousands of material design icons and the parse-color plugin does a great job loading named css colors.
+
+After getting the stream deck to work as a fancy lancher for my solus desktop I made a couple of other button layouts.
+
+![Sentiment Layout](/examples/sentiment-config.jpg "Sentiment Command Layout")
+
+![Star Rating Layout](/examples/star-rating-config.jpg "Star Rating Command Layout")
+
+## Dependancies
+```
+  npm install
+    elgato-stream-deck
+    material-design-icons-svg
+    parse-color
+    lodash
+    sharp
+```
+
+
+
+

@@ -1,12 +1,14 @@
 const gfx = require('./btn-render.js');
 const streamDeck = require('elgato-stream-deck');
 const _ = require('lodash');
-const osc = require('node-osc');
+var sys = require('util')
+var exec = require('child_process').exec;
 
-const settings = require('./settings.json');
+const settings = require('./configs/default.json');
 
 var buttons = [];
 var clients = [];
+
 
 
 function ControllerButton(b) {
@@ -32,30 +34,28 @@ function ControllerButton(b) {
     });
   }
 
-  this.sendOsc = function (state) {
-    var o = state ? self.desc.oscDown : self.desc.oscUp;
+  this.sendCmd = function (state) {
+    var o = state ? self.desc.cmdDown : self.desc.cmdUp;
 
     if (o) {
-      var client = clients[o[0]];
-
-      if (client) {
-        var path = o[1];
+        var cmd = o[1];
         var val = o[2];
 
-        client.send(path, val);
-        console.log("Sent", client.host + ":" + client.port, path, val);
-      }
+        exec(cmd, function(err, stdout, stderr) {
+          console.log(stdout);
+        });
+        console.log("Sent", cmd, val);
     }
   }
 
   this.down = function () {
-    self.sendOsc(true);
+    self.sendCmd(true);
 
     self.setImage(true);
   }
 
   this.up = function () {
-    self.sendOsc(false);
+    self.sendCmd(false);
 
     self.setImage(false);
   }
@@ -73,11 +73,6 @@ _.forEach(settings.buttons, function (b) {
   if (_.isNumber(b.key) && _.inRange(b.key, 0, 15)) {
     buttons[b.key] = new ControllerButton(b);
   }
-});
-
-// Set up targets from settings file
-_.forEach(settings.targets, function (c) {
-  clients.push(new osc.Client(c.host, c.port));
 });
 
 // Set up Stream Deck callbacks

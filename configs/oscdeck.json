@@ -1,8 +1,4 @@
 {
-  "targets": [
-    { "host": "localhost", "port": 53000 }
-  ],
-
   "buttons":[
 
     {
@@ -10,15 +6,15 @@
       "symbol": "cancel",
       "color": "red",
       "text": "Reset",
-      "oscDown": [0, "/boom", 1],
-      "oscUp": [0, "/boom", 0]
+      "cmdDown": [0, "/boom", 1],
+      "cmdUp": [0, "/boom", 0]
     },
     {
       "key": 1,
       "symbol": "play",
       "color": "#00FF00",
       "text": "Play",
-      "oscDown": [0, "/play", 1]
+      "cmdDown": [0, "/play", 1]
     },
     {
       "key": 2,
@@ -42,7 +38,7 @@
       "key": 10,
       "symbol": "fan",
       "color": "orange",
-      "oscDown": [0, "/opentray", 1]
+      "cmdDown": [0, "/opentray", 1]
     }
   ]
 }

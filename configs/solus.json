@@ -1,0 +1,96 @@
+{
+
+  "buttons":[
+
+    {
+      "key": 0,
+      "symbol": "google-chrome",
+      "color": "royalblue",
+      "text": "Chrome",
+      "cmdDown": [0, "/opt/google/chrome/chrome", 1]
+    },
+    {
+      "key": 1,
+      "symbol": "firefox",
+      "color": "orangered",
+      "text": "Firefox",
+      "cmdDown": [0, "firefox", 1]
+    },
+    {
+      "key": 2,
+      "symbol": "netflix",
+      "color": "red",
+      "text": "Netflix",
+      "cmdDown": [0, "/opt/google/chrome/chrome netflix.com", 1]
+    },
+    {
+      "key": 3,
+      "symbol": "github-circle",
+      "text": "github",
+      "cmdDown": [0, "/opt/google/chrome/chrome github.com/garthvh", 1]
+    },
+    {
+      "key": 4,
+      "symbol": "visualstudio",
+      "text": "VS Code",
+      "color": "indigo",
+      "cmdDown": [0, "/usr/share/vscode/code-oss", 1]
+    },
+    {
+      "key": 5,
+      "symbol": "settings",
+      "color": "gray",
+      "text": "Tweak Tool",
+      "cmdDown": [0, "gnome-tweak-tool", 1]
+    },
+    {
+      "key": 6,
+      "symbol": "chart-bar",
+      "color": "yellow",
+      "text": "htop",
+      "cmdDown": [0, "gnome-terminal -x bash -c \"htop\"", 1]
+    },
+    {
+      "key": 7,
+      "symbol": "cube",
+      "color": "blue",
+      "text": "Simplify 3D",
+      "cmdDown": [0, "sudo /opt/Simplify3D-4.0.0/LaunchScript.sh", 1]   
+    },
+    {
+      "key": 8,
+      "symbol": "calculator",
+      "color": "gray",
+      "text": "Calculator",
+      "cmdDown": [0, "gnome-calculator", 1]
+    },
+    {
+      "key": 9,
+      "symbol": "console",
+      "color": "darkgray",
+      "text": "Terminal",
+      "cmdDown": [0, "gnome-terminal", 1]
+    },
+    {
+      "key": 12,
+      "symbol": "printer-3d",
+      "color": "green",
+      "text":"OctoPrint",
+      "cmdDown": [0, "/opt/google/chrome/chrome http://octopi.local/", 1]
+    },
+    {
+      "key": 13,
+      "symbol": "printer-3d",
+      "color": "royalblue",
+      "text": "MAKEiT",
+      "cmdDown": [0, "/opt/google/chrome/chrome 192.168.7.31/upload.cgi", 1]
+    },
+    {
+      "key": 14,
+      "symbol": "printer-3d",
+      "color": "orange",
+      "text": "Prusa",
+      "cmdDown": [0, "/opt/google/chrome/chrome 192.168.7.53/upload.cgi", 1]
+    }
+  ]
+}
